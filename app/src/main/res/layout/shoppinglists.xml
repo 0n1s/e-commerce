@@ -16,7 +16,7 @@
     >
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="50dp"
         android:layout_height="100dp"
         android:id="@+id/imageView2"
         android:layout_alignParentTop="true"
@@ -25,14 +25,19 @@
 
     <TextView
         android:text="Item Name"
+
+
+        android:id="@+id/name"
+        android:paddingTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/Aquamarine"
-        android:id="@+id/name"
-        android:paddingTop="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/imageView2" />
+
+
+
 
     <TextView
         android:text="90000"
@@ -70,15 +75,25 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/id" />
 
-    <TextView
-        android:text="24/02/2017"
-        android:paddingTop="20dp"
-        android:textColor="@color/White"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/date"
-        android:layout_above="@+id/price"
-        android:layout_alignParentEnd="true" />
+
+
+
+        <TextView
+            android:text="24/02/2017"
+            android:layout_above="@+id/price"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/date"
+            />
+
+
+
+
+
+
+
 
     <TextView
         android:id="@+id/textView23"

@@ -16,22 +16,16 @@
     <ImageView
         android:id="@id/drawer_layout"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/onlinestore"
+        android:layout_height="100dp"
+        android:src="@drawable/ldk"
     />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Easy buy and sell"
+        android:text="LDK"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quality items, Affordable price" />
 
 </LinearLayout>

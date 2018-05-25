@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="eccomerce.maathis.maathai.Details"
+
     tools:showIn="@layout/activity_details">
 
     <com.beardedhen.androidbootstrap.BootstrapLabel
@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_alignParentTop="true"
+        android:visibility="gone"
         android:text="TextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
@@ -28,9 +29,9 @@
         android:layout_height="150dp"
         android:layout_margin="5dp"
         android:layout_below="@+id/textView13"
-
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        />
 
     <com.beardedhen.androidbootstrap.BootstrapLabel
         android:id="@+id/textView14"
@@ -38,10 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:roundedCorners="true"
+        android:visibility="gone"
         app:bootstrapBrand="primary"
         android:layout_below="@+id/imageView5"
         android:layout_centerHorizontal="true"
-        android:text="Food contents/Descrption" />
+        android:text="About " />
 
 
     <us.feras.mdv.MarkdownView

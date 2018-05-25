@@ -6,7 +6,6 @@ package eccomerce.com;
 
 public class URLs
 {
-
     //http://code0.co.ke/dkutrest1/pages/index.php
     public static String main_url="http://ecommerce.masomobora.com/android/";
     //http://localhost/cladi/pages/images/

@@ -62,6 +62,7 @@ public class Details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         TypefaceProvider.registerDefaultIconSets();
         setContentView(R.layout.activity_details);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -106,6 +107,8 @@ public class Details extends AppCompatActivity {
         //Toast.makeText(this, item_description, Toast.LENGTH_SHORT).show();
         markdownView.loadMarkdown("## "+item_description);
         name.setText(item_name);
+        name.setVisibility(View.GONE);
+        getSupportActionBar().setTitle(item_name);
         String final_url=img_url+image_url;
 
 
@@ -118,6 +121,7 @@ public class Details extends AppCompatActivity {
             public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception) {
             }
         });
+
         builder.build().load(final_url).into(image);
 
 

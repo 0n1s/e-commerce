@@ -2,6 +2,7 @@ package eccomerce.com;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -60,12 +61,14 @@ public class Utensils extends AppCompatActivity {
 
         getSupportActionBar().setTitle("My orders");
         listView=(ListView)findViewById(R.id.listview);
+
         listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 HashMap<String,String> map =(HashMap)parent.getItemAtPosition(position);
                 final  String itemid =   map.get("id");
-
+               // Toast.makeText(Utensils.this, "ghey", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Utensils.this, Track2.class));
 
             }});
         SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
@@ -133,6 +136,9 @@ public class Utensils extends AppCompatActivity {
             {  JSONObject jo = result.getJSONObject(i);
 
 
+            StringBuilder sb = new StringBuilder();
+
+
                 succes=jo.getString("success");
                 if (succes.equals("1")) {
                     String dateexe = jo.getString("date");
@@ -141,10 +147,23 @@ public class Utensils extends AppCompatActivity {
                     String trxID = jo.getString("trxID");
                     String name = jo.getString("content");
 
+                    String split_names[] = name.split("<br/>");
+
+                    if(split_names.length>0)
+                    {
+                        for (int n=1; n<split_names.length; n++)
+                        {
+                            sb.append(n+": "+split_names[n]+"\n");
+                        }
+                    }
+
+
+
+
 
                     HashMap<String, String> employees = new HashMap<>();
                     employees.put("date", dateexe);
-                    employees.put("name", name);
+                    employees.put("name", sb.toString());
                     employees.put("price", price);
                     employees.put("id", trxID);
                     list.add(employees);
@@ -171,6 +190,9 @@ public class Utensils extends AppCompatActivity {
         ListAdapter adapter = new SimpleAdapter(Utensils.this, list, R.layout.shoppinglists,
                 new String[]{"name", "price","id","date"}, new int[]{R.id.date, R.id.price,R.id.id, R.id.textView26});
         listView.setAdapter(adapter);
+
+
+
     }
 
 

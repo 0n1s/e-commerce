@@ -27,6 +27,7 @@ android:layout_centerHorizontal="true">
         app:roundedCorners="true"
         app:bootstrapBrand="success"
         app:bootstrapHeading="h5"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_height="wrap_content"
         android:id="@+id/bootstrapLabel"
         android:layout_alignParentTop="true"
